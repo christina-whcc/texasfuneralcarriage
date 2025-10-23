@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Texas Funeral Carriage | Honoring Loved Ones With Timeless Elegance</title>
+  <style>
+    :root {
+      --primary: #A51B31;
+      --section-bg: #fff;
+      --gallery-bg: #f6f5f1;
+      --shadow: 0 2px 16px rgba(0,0,0,0.07);
+      --border-radius: 12px;
+      --max-width: 1040px;
+    }
+    body {
+      font-family: Arial, "Segoe UI", sans-serif;
+      background: #faf9f6;
+      margin: 0;
+      color: #222;
+    }
+    .header-image {
+      width: 100%;
+      max-height: 340px;
+      object-fit: cover;
+      display: block;
+      position: relative;
+    }
+    .header-title-block {
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 340px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      pointer-events: none;
+    }
+    .header-title-content {
+      background: rgba(165,27,49,0.68);
+      color: #fff;
+      text-align: center;
+      border-radius: 0 0 var(--border-radius) var(--border-radius);
+      padding: 36px 24px 32px 24px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.15);
+      width: 100vw;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      pointer-events: auto;
+    }
+    h1 {
+      font-size: 2.3em;
+      margin-bottom: 0.1em;
+      letter-spacing: 1px;
+      font-weight: 700;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+    .tagline {
+      font-size: 1.2em;
+      font-style: italic;
+      margin-bottom: 0.7em;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.11);
+    }
+    .intro-paragraph {
+      font-size: 1.06em;
+      margin: 0 auto 1em auto;
+      max-width: 820px;
+      color: #fff;
+      background: rgba(0,0,0,0.05);
+      border-radius: 6px;
+      padding: 14px 16px;
+      box-shadow: 0 1px 7px rgba(0,0,0,0.07);
+    }
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      background: var(--section-bg);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      padding: 32px 28px 28px 28px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: var(--primary);
+      margin-bottom: 8px;
+      font-size: 1.35em;
+      font-weight: 700;
+      letter-spacing: 1px;
+      border-bottom: 2px solid var(--primary);
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+    .services-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-between;
+    }
+    .service-card {
+      flex: 1 1 220px;
+      background: var(--gallery-bg);
+      padding: 16px;
+      border-radius: 8px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+      text-align: center;
+      margin-bottom: 16px;
+      border: 2px solid var(--primary);
+    }
+    .service-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      background: #ccc;
+      border: 2px solid var(--primary);
+    }
+    .gallery {
+      background: var(--gallery-bg);
+      border-radius: 8px;
+      padding: 18px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+      gap: 18px;
+      margin-top: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+    .gallery img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 6px;
+      background: #ddd;
+      border: 2px solid var(--primary);
+    }
+    .contact-form {
+      background: var(--gallery-bg);
+      padding: 18px;
+      border-radius: 8px;
+      max-width: 520px;
+      margin: 0 auto;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.07);
+      border: 2px solid var(--primary);
+    }
+    .contact-form label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: var(--primary);
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 14px;
+      border: 1px solid #bbb;
+      border-radius: 4px;
+      font-size: 1em;
+      background: #fff;
+      transition: border-color 0.2s;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: var(--primary);
+      outline: none;
+    }
+    .contact-form button {
+      background: var(--primary);
+      color: #fff;
+      padding: 10px 28px;
+      border: none;
+      border-radius: 4px;
+      font-size: 1em;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 2px 12px rgba(165,27,49,0.09);
+      transition: background 0.2s;
+    }
+    .contact-form button:hover {
+      background: #7c1426;
+    }
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    a:hover { color: #7c1426; }
+    footer {
+      text-align: center;
+      padding: 18px;
+      background: var(--gallery-bg);
+      color: #888;
+      font-size: 0.98em;
+      margin-top: 24px;
+      border-radius: 0 0 var(--border-radius) var(--border-radius);
+    }
+    @media (max-width: 800px) {
+      .container { padding: 16px 4vw; }
+      .services-list { flex-direction: column; gap: 18px;}
+      .header-title-content { padding: 24px 2vw 20px 2vw; }
+      .header-title-block { height: 180px; }
+      .header-image { max-height: 180px; }
+      .service-card img, .gallery img { height: 90px; }
+      h2 { font-size: 1.1em; }
+    }
+  </style>
+</head>
+<body>
+  <div style="position:relative;">
+    <img class="header-image" src="header.jpg" alt="Texas Funeral Carriage header">
+    <div class="header-title-block">
+      <div class="header-title-content">
+        <h1>Texas Funeral Carriage</h1>
+        <div class="tagline">Honoring Loved Ones With Timeless Elegance</div>
+        <div class="intro-paragraph">
+          Honor your loved one with the dignity and tradition of a horse-drawn funeral procession from Texas Funeral Carriage, part of the trusted White Horse and Carriage Company in San Antonio. Serving families across Texas, we provide a full range of elegant funeral vehicles, including our white horse-drawn hearse, traditional black caisson, elegant family carriages, and the solemn riderless horse. Every detail is handled with care, ensuring a graceful, unforgettable tribute that celebrates a life with respect and timeless elegance.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <section>
+      <h2>About Us</h2>
+      <p>
+        Honor your loved one with the dignity and tradition of a horse-drawn funeral procession from Texas Funeral Carriage, part of the trusted White Horse and Carriage Company in San Antonio. Serving families across Texas, we provide a full range of elegant funeral vehicles, including our white horse-drawn hearse, traditional black caisson, elegant family carriages, and the solemn riderless horse. Every detail is handled with care, ensuring a graceful, unforgettable tribute that celebrates a life with respect and timeless elegance.
+      </p>
+    </section>
+    <section>
+      <h2>Our Mission</h2>
+      <p>
+        Texas Funeral Carriage is committed to providing you and your family with meaningful funeral and memorial services. Our experienced team will guide you through the process with compassion and understanding, ensuring that your loved one is honored in a way that reflects their life and legacy. For more information, fill out the form below and we will be in touch. For fastest response, call <strong>210-646-4102</strong>.
+      </p>
+    </section>
+    <section>
+      <h2>Our Services</h2>
+      <div class="services-list">
+        <div class="service-card">
+          <img src="hearse.jpg" alt="White horse-drawn hearse">
+          <h3 style="color:var(--primary);">White Horse-Drawn Hearse</h3>
+          <p>An elegant, classic white hearse carriage for a dignified final tribute.</p>
+        </div>
+        <div class="service-card">
+          <img src="caisson.jpg" alt="Traditional black caisson">
+          <h3 style="color:var(--primary);">Traditional Black Caisson</h3>
+          <p>A timeless black caisson for traditional military and formal service processions.</p>
+        </div>
+        <div class="service-card">
+          <img src="family-carriage.jpg" alt="Family carriage">
+          <h3 style="color:var(--primary);">Family Carriage</h3>
+          <p>Graceful carriage for family members, adding comfort and elegance to your procession.</p>
+        </div>
+        <div class="service-card">
+          <img src="riderless-horse.jpg" alt="Riderless horse (placeholder)">
+          <h3 style="color:var(--primary);">Riderless Horse</h3>
+          <p>The solemn riderless horse symbolizes honor and remembrance (photo coming soon).</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>Photo Gallery</h2>
+      <div class="gallery">
+        <img src="gallery1.jpg" alt="Gallery photo 1">
+        <img src="gallery2.jpg" alt="Gallery photo 2">
+        <img src="gallery3.jpg" alt="Gallery photo 3">
+        <img src="gallery4.jpg" alt="Gallery photo 4">
+      </div>
+      <p style="text-align:center; margin-top:8px; color:#888;">More photos coming soon</p>
+    </section>
+    <section>
+      <h2>Contact Us</h2>
+      <form class="contact-form" action="https://formspree.io/f/{your-form-id}" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required>
+        <label for="email">Email:</label>
+        <input type="email" name="_replyto" id="email" required>
+        <label for="message">Message:</label>
+        <textarea name="message" id="message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <p style="margin-top:12px; text-align:center;">Or call us at <strong>210-646-4102</strong> for immediate assistance.</p>
+    </section>
+  </div>
+  <footer>
+    &copy; 2025 Texas Funeral Carriage &mdash; Serving San Antonio and all of Texas
+  </footer>
+</body>
+</html>
