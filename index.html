@@ -445,42 +445,84 @@
     </section>
 
     <!-- Contact Form -->
-    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-    <input type="hidden" name="form-name" value="contact">
-    <!-- Honeypot field to prevent spam -->
-    <p style="display:none;">
-        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-    </p>
-    
-    <div class="form-group">
-        <label for="name">Name *</label>
-        <input type="text" id="name" name="name" required>
+<section class="contact-form">
+    <div class="contact-wrapper">
+        <div class="form-container">
+            <h2 style="text-align: center; margin-bottom: 30px; color: #a51b31;">Contact Us</h2>
+            
+            <div id="success-message" style="display:none; background:#a51b31; color:white; padding:20px; border-radius:8px; margin-bottom:20px; text-align:center;">
+                <strong style="font-size:1.2rem;">Thank you for contacting us!</strong>
+                <p style="margin-top:10px;">We've received your message and will be in touch soon.</p>
+            </div>
+
+            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contact-form" onsubmit="return handleSubmit(event)">
+                <input type="hidden" name="form-name" value="contact">
+                <!-- Honeypot field to prevent spam -->
+                <p style="display:none;">
+                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                </p>
+                
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="service">Service Interested In</label>
+                    <select id="service" name="service">
+                        <option value="">Select a service</option>
+                        <option value="hearse">White Horse-Drawn Hearse</option>
+                        <option value="caisson">Black Caisson</option>
+                        <option value="family-carriage">Family Carriage</option>
+                        <option value="riderless-horse">Riderless Horse</option>
+                        <option value="other">Other / Multiple Services</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+
+            <script>
+            function handleSubmit(event) {
+                // Let the form submit naturally to Netlify
+                setTimeout(function() {
+                    document.getElementById('success-message').style.display = 'block';
+                    document.getElementById('contact-form').style.display = 'none';
+                }, 100);
+                return true;
+            }
+            </script>
+        </div>
+
+        <div class="contact-info">
+            <img src="https://raw.githubusercontent.com/christina-whcc/texasfuneralcarriage/main/images/logo.png" alt="White Horse and Carriage Company" class="contact-logo">
+            <p><strong style="font-size: 1.2rem;">Texas Funeral Carriage</strong></p>
+            <p>By</p>
+            <p><strong style="font-size: 1.2rem;">White Horse and Carriage Company</strong></p>
+            <p style="margin-top: 20px;">Contact us for more information about our services</p>
+            <p style="margin-top: 20px;"><a href="tel:210-646-4102" style="color: #0ec0ff; text-decoration: none; font-size: 1.1rem;">210-646-4102</a></p>
+            <p><a href="mailto:info@whitehorseandcarriage.com" style="color: #0ec0ff; text-decoration: none;">info@whitehorseandcarriage.com</a></p>
+            <div class="social-links" style="margin-top: 30px;">
+                <a href="http://facebook.com/whitehorseandcarriage" target="_blank" aria-label="Facebook">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                </a>
+                <a href="http://instagram.com/whitehorseandcarriageco" target="_blank" aria-label="Instagram">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
     </div>
-    <div class="form-group">
-        <label for="email">Email *</label>
-        <input type="email" id="email" name="email" required>
-    </div>
-    <div class="form-group">
-        <label for="phone">Phone *</label>
-        <input type="tel" id="phone" name="phone" required>
-    </div>
-    <div class="form-group">
-        <label for="service">Service Interested In</label>
-        <select id="service" name="service">
-            <option value="">Select a service</option>
-            <option value="hearse">White Horse-Drawn Hearse</option>
-            <option value="caisson">Black Caisson</option>
-            <option value="family-carriage">Family Carriage</option>
-            <option value="riderless-horse">Riderless Horse</option>
-            <option value="other">Other / Multiple Services</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message"></textarea>
-    </div>
-    <button type="submit" class="submit-btn">Send Message</button>
-</form>
+</section>
             </div>
 
             <div class="contact-info">
@@ -511,4 +553,5 @@
     </footer>
 </body>
 </html>
+
 
