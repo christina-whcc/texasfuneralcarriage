@@ -9,12 +9,15 @@
 <meta name="keywords" content="Texas funeral carriage, horse drawn funeral Texas, horse drawn hearse San Antonio, funeral caisson Texas, riderless horse funeral Texas, military funeral horse carriage Texas, horse drawn funeral Houston, horse drawn funeral Austin, horse drawn funeral Dallas, White Horse and Carriage Company">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.texasfuneralcarriage.com/">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.texasfuneralcarriage.com/">
 <meta property="og:title" content="Texas Funeral Carriage | Horse-Drawn Funeral Services Across Texas">
 <meta property="og:description" content="Honor your loved one with the timeless dignity of a horse-drawn funeral procession. Serving families across San Antonio, Houston, Austin, DFW & all of Texas.">
 <meta property="og:image" content="https://raw.githubusercontent.com/christina-whcc/texasfuneralcarriage/main/images/header-bg.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Texas Funeral Carriage | Horse-Drawn Funeral Services">
 <meta name="twitter:description" content="Dignified horse-drawn funeral processions serving families across Texas.">
@@ -30,9 +33,19 @@
   "description": "Horse-drawn funeral processions serving families across Texas — white hearse, black caisson, family carriages, and riderless horse.",
   "telephone": "+12106464102",
   "address": { "@type": "PostalAddress", "addressLocality": "San Antonio", "addressRegion": "TX", "addressCountry": "US" },
+  "geo": { "@type": "GeoCoordinates", "latitude": 29.4241, "longitude": -98.4936 },
   "areaServed": ["San Antonio","Houston","Austin","Dallas","Fort Worth","New Braunfels","Boerne","Seguin","Fredericksburg","San Marcos","Round Rock","Georgetown","Katy","Sugar Land","The Woodlands","Plano","Arlington","Texas"],
   "serviceType": ["Horse-Drawn Hearse","Black Caisson","Family Carriage","Riderless Horse","Military Funeral Procession"],
-  "priceRange": "$$"
+  "priceRange": "$$",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "description": "By appointment only, available 365 days a year"
+  },
+  "sameAs": [
+    "https://www.facebook.com/whitehorseandcarriage",
+    "https://www.instagram.com/whitehorseandcarriageco"
+  ]
 }
 </script>
 
@@ -208,7 +221,17 @@
   .footer-social a:hover img { opacity: 0.85; }
   .footer-bottom { background: #141210; border-top: 1px solid rgba(255,255,255,0.06); padding: 20px 48px; display: flex; justify-content: space-between; align-items: center; font-size: 0.65rem; letter-spacing: 0.1em; color: rgba(255,255,255,0.2); flex-wrap: wrap; gap: 8px; }
 
-  /* REFLECTIONS */
+  /* CALL NOW */
+  .nav-call { font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--white); text-decoration: none; background: var(--gold); padding: 9px 20px; transition: all 0.25s; white-space: nowrap; }
+  .nav-call:hover { background: #a07e3a; }
+  .call-now-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 200; background: var(--gold); text-align: center; padding: 16px; }
+  .call-now-bar a { color: var(--white); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 10px; }
+  .call-now-bar a::before { content: '📞'; font-size: 1rem; }
+
+  @media (max-width: 900px) {
+    .call-now-bar { display: block; }
+    body { padding-bottom: 56px; }
+  }
   .reflections { background: var(--parchment); padding: 100px 48px; }
   .reflections-header { margin-bottom: 56px; }
   .reflections-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; max-width: 1200px; }
@@ -261,6 +284,8 @@
     .hero-sub { font-size: 0.82rem; margin-bottom: 32px; }
     .btn-primary, .btn-outline { padding: 14px 28px; font-size: 0.65rem; }
     .services-grid { grid-template-columns: 1fr; gap: 36px; }
+    .service-card-img { aspect-ratio: unset; height: 260px; }
+    .service-card-img img { object-position: center 30%; }
     .gallery-grid { grid-template-columns: 1fr 1fr; }
     .gallery-caption { opacity: 1; }
     .location-tiles { grid-template-columns: 1fr 1fr; gap: 2px; }
@@ -292,6 +317,7 @@
     <li><a href="#faq">FAQ</a></li>
     <li><a href="/reflections">Reflections</a></li>
   </ul>
+  <a href="tel:2106464102" class="nav-call">Call Now</a>
   <a href="#contact" class="nav-cta">Contact Us</a>
 </nav>
 
@@ -727,6 +753,11 @@
 <div class="footer-bottom">
   <span>&copy; 2025 Texas Funeral Carriage &nbsp;·&nbsp; White Horse &amp; Carriage Company &nbsp;·&nbsp; All rights reserved.</span>
   <span>texasfuneralcarriage.com</span>
+</div>
+
+<!-- STICKY CALL NOW BAR (mobile) -->
+<div class="call-now-bar" aria-label="Call us now">
+  <a href="tel:2106464102">(210) 646-4102 &nbsp;·&nbsp; Call Now</a>
 </div>
 
 <script>
