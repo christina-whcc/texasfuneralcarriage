@@ -712,7 +712,7 @@
       </div>
       <div class="form-group">
         <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone" placeholder="(210) 000-0000" autocomplete="tel" required>
+        <input type="tel" id="phone" name="phone" placeholder="(210) 646-4102" autocomplete="tel" required>
       </div>
       <div class="form-group">
         <label for="service">Service Interested In</label>
@@ -788,55 +788,6 @@
       a.style.color = a.getAttribute('href') === '#' + current ? 'var(--gold)' : '';
     });
   }, { passive: true });
-</script>
-
-  <script>
-  var reveals = document.querySelectorAll('.reveal');
-  var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry, i) {
-      if (entry.isIntersecting) {
-        setTimeout(function() { entry.target.classList.add('visible'); }, i * 100);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
-  reveals.forEach(function(r) { observer.observe(r); });
-
-  var FORMSPREE_URL = 'https://formspree.io/f/xljjlvqa';
-
-  document.getElementById('inquiry-form').addEventListener('submit', async function (e) {
-    e.preventDefault();
-    var form = e.target;
-    var msg = document.getElementById('form-msg');
-    var btn = document.getElementById('form-btn');
-
-    if (!form.checkValidity()) { form.reportValidity(); return; }
-
-    btn.disabled = true;
-    btn.textContent = 'Sending...';
-    msg.style.display = 'none';
-
-    var data = new FormData(form);
-
-    try {
-      var res = await fetch(FORMSPREE_URL, {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: data
-      });
-      if (res.ok) {
-        window.location.href = '/thank-you';
-        return;
-      }
-      throw new Error('Formspree ' + res.status);
-    } catch (err) {
-      msg.textContent = 'Something went wrong. Please call us at (210) 646-4102.';
-      msg.style.color = '#c0392b';
-      msg.style.display = 'block';
-      btn.disabled = false;
-      btn.innerHTML = 'Send Inquiry &rarr;';
-    }
-  });
 </script>
 </body>
 </html>
